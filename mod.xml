@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification
+	application="Heroes of Newerth"
+	appversion="*"
+	mmversion="*"
+	name="Movable ClientInfo"
+	version="1.0"
+	date="2018-09-06"
+	description="Makes the ClientInfo (Ping and FPS) more customizable by making them movable frames in HoN 4.0."
+	author="Alcazer"
+	weblink="https://github.com/Alcazer/HoN-Movable-ClientInfo"
+	updatecheckurl="http://raw.githubusercontent.com/Alcazer/HoN-Movable-ClientInfo/master/version.txt"
+	updatedownloadurl="http://github.com/Alcazer/HoN-Movable-ClientInfo/releases/download/Latest/Movable_ClientInfo.honmod"
+>
+	<!-- Classic UI -->
+	<editfile name="ui/game_legacy.interface">
+		<find><![CDATA[<include file="/ui/game_clientinfo.package" />]]></find>
+		<insert position="before"><![CDATA[<instance name="movf_frame" id="game_clientinfo_panel" textid="Ping - FPS"/>]]></insert>
+	</editfile>
+
+	<!-- Razor UI -->
+	<editfile name="ui/game_apex.interface">
+		<find><![CDATA[<include file="/ui/game_clientinfo.package" />]]></find>
+		<insert position="before"><![CDATA[<instance name="movf_frame" id="game_clientinfo_panel" textid="Ping - FPS"/>]]></insert>
+	</editfile>
+
+	<!-- Sentinel UI -->
+	<editfile name="ui/game_garena_other.interface">
+		<find><![CDATA[<include file="/ui/game_clientinfo.package" />]]></find>
+		<insert position="before"><![CDATA[<instance name="movf_frame" id="game_clientinfo_panel" textid="Ping - FPS"/>]]></insert>
+	</editfile>
+</modification>
